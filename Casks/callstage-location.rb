@@ -1,6 +1,6 @@
 cask "callstage-location" do
-  version "1.0"
-  sha256 "6ec05f23c9e803889fc6754b8aff03a757c2789970a7da7d2350d7fbdbb668db"
+  version "1.0.1"
+  sha256 "22dfcfd9eaab47fe580ee93e3a45d8da861becedbd7a4dd97b094d6343f68b70"
 
   url "https://updates.callstage.app/tools/callstage-location-#{version}.zip"
   name "Callstage Location"
