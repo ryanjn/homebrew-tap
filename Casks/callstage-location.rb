@@ -4,7 +4,7 @@ cask "callstage-location" do
 
   url "https://updates.callstage.app/tools/callstage-location-#{version}.zip"
   name "Callstage Location"
-  desc "Prints the current city for a Callstage text layer"
+  desc "Prints the current city, address or metro area for a Callstage text layer"
   homepage "https://github.com/ryanjn/homebrew-tap"
 
   livecheck do
@@ -13,18 +13,23 @@ cask "callstage-location" do
 
   depends_on macos: :ventura
 
-  binary "location", target: "callstage-location"
+  binary "location"
   artifact "CallstageLocate.app",
            target: "#{Dir.home}/Library/Application Support/Callstage/CallstageLocate.app"
 
   zap trash: "~/Library/Application Support/Callstage"
 
   caveats <<~EOS
-    In Callstage, add a Text layer and set its command to:
-      callstage-location
+    In Callstage, add a Text layer and set its command to, for example:
+      location            # Portland, OR
+      location metro      # Portland-Vancouver-Hillsboro, OR-WA
+      location -f '{city}, {state}'
+    `location --help` lists every preset and template token.
 
-    It prints "City, ST" (or "City, Country"). The first run asks for
-    Location access for "Callstage Location"; without it, it falls back to
-    IP geolocation, which shows a VPN's city when one is on.
+    The first run asks for Location access for "Callstage Location". Without
+    it, location falls back to IP geolocation: city-level only, and a VPN's
+    city when one is on.
+
+    Metro data: US Census Bureau (public domain) and GeoNames (CC BY 4.0).
   EOS
 end
