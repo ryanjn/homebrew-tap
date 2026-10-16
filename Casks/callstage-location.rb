@@ -7,6 +7,10 @@ cask "callstage-location" do
   desc "Prints the current city for a Callstage text layer"
   homepage "https://github.com/ryanjn/homebrew-tap"
 
+  livecheck do
+    skip "Published by the Callstage release scripts, which bump this cask"
+  end
+
   depends_on macos: :ventura
 
   binary "location", target: "callstage-location"
