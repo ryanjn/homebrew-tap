@@ -5,7 +5,7 @@ cask "callstage-location" do
   url "https://updates.callstage.app/tools/callstage-location-#{version}.zip"
   name "Callstage Location"
   desc "Prints the current city, address or metro area for a Callstage text layer"
-  homepage "https://github.com/ryanjn/homebrew-tap"
+  homepage "https://callstage.app/"
 
   livecheck do
     skip "Published by the Callstage release scripts, which bump this cask"

@@ -5,7 +5,7 @@ cask "callstage" do
   url "https://updates.callstage.app/releases/Callstage-#{version}.dmg"
   name "Callstage"
   desc "Virtual camera with image, text and video overlays"
-  homepage "https://github.com/ryanjn/homebrew-tap"
+  homepage "https://callstage.app/"
 
   livecheck do
     url "https://updates.callstage.app/appcast.xml"
