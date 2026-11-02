@@ -1,6 +1,6 @@
 cask "callstage" do
-  version "1.39"
-  sha256 "79e5a9a77733c577ead77cf5a51bb28d4a768ff243d5d4495fb630b22c2f163e"
+  version "1.40"
+  sha256 "63092e2cc84b7fefef69a1723fb0b63ee7434adfa7fa13342eb09fed79fee632"
 
   url "https://updates.callstage.app/releases/Callstage-#{version}.dmg"
   name "Callstage"
